@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia María Soledad Herrera</title>
+    <title>Academia María Soledad Herrera — Recursos & Formación Musical</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -112,16 +112,17 @@
         /* --- BOTONES --- */
         .btn {
             display: inline-block;
-            padding: 16px 36px;
+            padding: 14px 32px;
             border-radius: 50px;
             font-family: var(--font-sans);
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: var(--transition);
             cursor: pointer;
             border: none;
+            text-align: center;
         }
 
         .btn-primary {
@@ -143,6 +144,18 @@
 
         .btn-gold:hover {
             background-color: var(--color-dorado-hover);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--color-mar);
+            color: var(--color-mar);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-mar);
+            color: var(--color-blanco);
             transform: translateY(-3px);
         }
 
@@ -187,12 +200,12 @@
 
         .nav-menu {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             align-items: center;
         }
 
         .nav-link {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 500;
             color: var(--color-texto);
             transition: var(--transition);
@@ -213,7 +226,7 @@
         .hero {
             height: 100vh;
             min-height: 650px;
-            background: linear-gradient(135deg, rgba(244, 238, 224, 0.7) 0%, rgba(234, 241, 235, 0.6) 100%), 
+            background: linear-gradient(135deg, rgba(244, 238, 224, 0.75) 0%, rgba(234, 241, 235, 0.65) 100%), 
                         url('https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
             display: flex;
             align-items: center;
@@ -327,7 +340,48 @@
             margin-bottom: 8px;
         }
 
-        /* --- 4. BENEFICIOS --- */
+        /* --- 4. RECURSOS Y SOFTWARE (NUEVA SECCIÓN RELEVANTE) --- */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .resource-card {
+            background: var(--color-blanco);
+            border-radius: var(--radius-main);
+            padding: 35px 25px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 4px solid var(--color-salvia);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+            border-top-color: var(--color-dorado);
+        }
+
+        .resource-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--color-madera);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .resource-icon {
+            font-size: 2.2rem;
+            color: var(--color-mar);
+            margin-bottom: 15px;
+        }
+
+        /* --- 5. BENEFICIOS --- */
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -362,7 +416,7 @@
             margin: 0 auto 20px;
         }
 
-        /* --- 5. PRÓXIMOS CURSOS --- */
+        /* --- 6. PRÓXIMOS CURSOS --- */
         .upcoming-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -384,7 +438,7 @@
             transform: translateX(5px);
         }
 
-        /* --- 6. TESTIMONIOS --- */
+        /* --- 7. TESTIMONIOS --- */
         .testimonials {
             background-color: var(--color-salvia-light);
         }
@@ -417,7 +471,7 @@
             color: var(--color-mar);
         }
 
-        /* --- 7. FAQ --- */
+        /* --- 8. FAQ --- */
         .faq-accordion {
             max-width: 800px;
             margin: 40px auto 0;
@@ -464,7 +518,7 @@
             transform: rotate(180deg);
         }
 
-        /* --- 8. CONTACTO --- */
+        /* --- 9. CONTACTO --- */
         .contact-form {
             max-width: 650px;
             margin: 40px auto 0;
@@ -502,7 +556,7 @@
             background-color: var(--color-blanco);
         }
 
-        /* --- 9. FOOTER --- */
+        /* --- 10. FOOTER --- */
         footer {
             background-color: var(--color-mar-dark);
             color: var(--color-arena);
@@ -590,6 +644,7 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about" class="nav-link">Sobre MSH</a></li>
                 <li><a href="#curso" class="nav-link">Curso Principal</a></li>
+                <li><a href="#recursos" class="nav-link">Descargas & Recursos</a></li>
                 <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
                 <li><a href="#proximos" class="nav-link">Próximos Cursos</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -666,7 +721,61 @@
         </div>
     </section>
 
-    <!-- 4. BENEFICIOS -->
+    <!-- 4. SECCIÓN RECURSOS, SOFTWARE Y DESCARGAS (NUEVO) -->
+    <section class="section-padding" id="recursos" style="background-color: var(--color-arena);">
+        <div class="container">
+            <div class="text-center fade-in">
+                <span class="section-subtitle">Aprende & Practica</span>
+                <h2 class="section-title">Herramientas & Descargas Gratuitas</h2>
+                <p style="max-width: 650px; margin: 10px auto 0; color: var(--color-texto-suave);">
+                    En la academia creemos en la formación accesible. Aquí tenés programas recomendados, guías y bibliotecas fidedignas para acompañar tu estudio.
+                </p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Recurso 1: MuseScore -->
+                <div class="resource-card fade-in">
+                    <div>
+                        <span class="resource-tag">Software Gratuito</span>
+                        <div class="resource-icon"><i class="fas fa-file-audio"></i></div>
+                        <h3>Editor MuseScore</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-texto-suave); margin: 12px 0;">
+                            Descargá el programa libre y gratuito número uno para leer, escribir y escuchar tus partituras en la computadora o tablet.
+                        </p>
+                    </div>
+                    <a href="https://musescore.org/es" target="_blank" class="btn btn-outline" style="margin-top: 15px;">Descargar MuseScore</a>
+                </div>
+
+                <!-- Recurso 2: Guía PDF Gratis -->
+                <div class="resource-card fade-in">
+                    <div>
+                        <span class="resource-tag">Material Didáctico</span>
+                        <div class="resource-icon"><i class="fas fa-file-pdf"></i></div>
+                        <h3>Guía de Iniciación al Piano</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-texto-suave); margin: 12px 0;">
+                            Un cuaderno en PDF listo para imprimir con ejercicios de postura, lectura de notas y acordes básicos.
+                        </p>
+                    </div>
+                    <a href="#contacto" class="btn btn-primary" style="margin-top: 15px;">Solicitar PDF Gratis</a>
+                </div>
+
+                <!-- Recurso 3: Portal Todotango -->
+                <div class="resource-card fade-in">
+                    <div>
+                        <span class="resource-tag">Archivo Histórico</span>
+                        <div class="resource-icon"><i class="fas fa-compact-disc"></i></div>
+                        <h3>Biblioteca Todotango</h3>
+                        <p style="font-size: 0.9rem; color: var(--color-texto-suave); margin: 12px 0;">
+                            Accedé al sitio fidedigno de referencia para consultar letras, acordes, partituras y versiones históricas del tango.
+                        </p>
+                    </div>
+                    <a href="https://www.todotango.com/" target="_blank" class="btn btn-outline" style="margin-top: 15px;">Explorar Todotango</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BENEFICIOS -->
     <section class="section-padding" id="beneficios">
         <div class="container">
             <div class="text-center fade-in">
@@ -703,8 +812,8 @@
         </div>
     </section>
 
-    <!-- 5. PRÓXIMOS CURSOS -->
-    <section class="section-padding" id="proximos" style="background-color: var(--color-arena);">
+    <!-- 6. PRÓXIMOS CURSOS -->
+    <section class="section-padding" id="proximos" style="background-color: var(--color-arena-soft);">
         <div class="container">
             <div class="text-center fade-in">
                 <span class="section-subtitle">Formación Continua</span>
@@ -731,7 +840,7 @@
         </div>
     </section>
 
-    <!-- 6. TESTIMONIOS -->
+    <!-- 7. TESTIMONIOS -->
     <section class="section-padding testimonials">
         <div class="container">
             <div class="text-center fade-in">
@@ -755,7 +864,7 @@
         </div>
     </section>
 
-    <!-- 7. PREGUNTAS FRECUENTES -->
+    <!-- 8. PREGUNTAS FRECUENTES -->
     <section class="section-padding">
         <div class="container">
             <div class="text-center fade-in">
@@ -791,7 +900,7 @@
         </div>
     </section>
 
-    <!-- 8. FORMULARIO DE CONTACTO -->
+    <!-- 9. FORMULARIO DE CONTACTO -->
     <section class="section-padding" id="contacto" style="background-color: var(--color-arena-soft);">
         <div class="container">
             <div class="text-center fade-in">
@@ -809,14 +918,14 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Mensaje</label>
-                    <textarea id="message" rows="5" class="form-control" placeholder="Escribe tu consulta aquí..." required></textarea>
+                    <textarea id="message" rows="5" class="form-control" placeholder="Escribe tu consulta o pide la Guía PDF aquí..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
-    <!-- 9. FOOTER -->
+    <!-- 10. FOOTER -->
     <footer>
         <div class="container footer-content">
             <a href="#" class="brand-logo" style="color: var(--color-arena);">Academia <span style="color: var(--color-dorado);">MSH</span></a>
@@ -892,9 +1001,10 @@
         // Formulario Feedback Simulación
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo a la brevedad.');
+            alert('¡Gracias por tu mensaje! Te responderemos a la brevedad con la información solicitada.');
             this.reset();
         });
     </script>
 </body>
+</html>
 </html>
